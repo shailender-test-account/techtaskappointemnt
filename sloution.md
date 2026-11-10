@@ -1,0 +1,2 @@
+Duplicate Client Taps: Rapid multi-tapping occurred because network latency prevented immediate UI confirmation, causing WhatsApp clients to retry identical payloads (requestId) within milliseconds before previous requests completed.
+Concurrent Double-Bookings: Simultaneous booking attempts bypassed application-level findOne() checks because multiple asynchronous threads read a slot as "available" at the exact same microsecond before either could write to the database.

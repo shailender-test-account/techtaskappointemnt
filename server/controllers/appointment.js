@@ -1,6 +1,6 @@
 import { Appointmentmodel } from "../appointmentmodel/appointmentmodel.js";
 
-export const Bookingcontroller = async (req, res) => {
+export const Bookingcontroller = async (req,res) => {
     try {
         const { reqid, patientphone, doctorid, slotTime } = req.body;
         if (!patientphone || !reqid || !doctorid || !slotTime) {
@@ -14,7 +14,7 @@ export const Bookingcontroller = async (req, res) => {
         if (existingappointemnt) {
             return res.status(200).json(
                 {
-                    message: "Booking already exists",
+                    message: "Booking with this timeSlot with doctor already exists",
                     success: false
                 }
             )
