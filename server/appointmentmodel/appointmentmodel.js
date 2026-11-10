@@ -33,7 +33,7 @@ const Apointmentschema=new mongoose.Schema(
     }
 )
 
-Apointmentschema.index({patientphone:1,createdAt:-1})
+Apointmentschema.index({ doctorid: 1, slotTime: 1 }, { unique: true });
 
 
 export const Appointmentmodel=mongoose.model("appointment",Apointmentschema)
