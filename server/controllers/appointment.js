@@ -10,7 +10,7 @@ export const Bookingcontroller = async (req, res) => {
             })
         }
 
-        const existingappointemnt = await Appointmentmodel.findOne({reqid})
+        const existingappointemnt = await Appointmentmodel.findOne({reqid,doctorid,slotTime})
         if (existingappointemnt) {
             return res.status(200).json(
                 {
